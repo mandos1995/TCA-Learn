@@ -20,33 +20,41 @@ struct CounterView: View {
     
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
-            Form {
-                Section {
-                    AboutView(readme: readme)
+            HStack {
+                Button {
+                    viewStore.send(.decrementButtonTapped)
+                } label: {
+                    Image(systemName: "minus")
                 }
-                Section {
-                    HStack {
-                        Button {
-                            viewStore.send(.decrementButtonTapped)
-                        } label: {
-                            Image(systemName: "minus")
-                        }
-                        
-                        Text("\(viewStore.count)")
-                            .monospacedDigit()
-                        
-                        Button {
-                            viewStore.send(.incrementButtonTapped)
-                        } label: {
-                            Image(systemName: "plus")
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
+                
+                Text("\(viewStore.count)")
+                    .monospacedDigit()
+                
+                Button {
+                    viewStore.send(.incrementButtonTapped)
+                } label: {
+                    Image(systemName: "plus")
                 }
             }
-            .buttonStyle(.borderless)
-            .navigationTitle("Counter")
-            .navigationBarTitleDisplayMode(.large)
         }
+    }
+}
+
+struct CounterDemoView: View {
+    let store: StoreOf<CounterFeature>
+    
+    var body: some View {
+        Form {
+            Section {
+                AboutView(readme: readme)
+            }
+            Section {
+                CounterView(store: store)
+                    .frame(maxWidth: .infinity)
+            }
+        }
+        .buttonStyle(.borderless)
+        .navigationTitle("Counter")
+        .navigationBarTitleDisplayMode(.large)
     }
 }

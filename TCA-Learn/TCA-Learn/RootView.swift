@@ -15,7 +15,7 @@ struct RootView: View {
             Form {
                 Section {
                     NavigationLink("Counter") {
-                        CounterView(store: Store(initialState: CounterFeature.State()) {
+                        CounterDemoView(store: Store(initialState: CounterFeature.State()) {
                             CounterFeature()
                                 ._printChanges()
                         })
