@@ -20,6 +20,13 @@ struct RootView: View {
                                 ._printChanges()
                         })
                     }
+                    
+                    NavigationLink("Two Counter") {
+                        TwoCounterView(store: Store(initialState: TwoCounterFeature.State()) {
+                            TwoCounterFeature()
+                                ._printChanges()
+                        })
+                    }
                 }
             }
         }
