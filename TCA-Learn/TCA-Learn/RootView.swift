@@ -7,13 +7,18 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 struct RootView: View {
     var body: some View {
         NavigationStack {
             Form {
                 Section {
                     NavigationLink("Counter") {
-                        CounterView()
+                        CounterView(store: Store(initialState: CounterFeature.State()) {
+                            CounterFeature()
+                                ._printChanges()
+                        })
                     }
                 }
             }
