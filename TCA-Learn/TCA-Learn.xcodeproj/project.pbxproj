@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		EED300B12ACFDE8B00BC7E3D /* TCA_LearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */; };
-		EED300B32ACFDE8B00BC7E3D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B22ACFDE8B00BC7E3D /* ContentView.swift */; };
+		EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B22ACFDE8B00BC7E3D /* RootView.swift */; };
 		EED300B52ACFDE8E00BC7E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED300B42ACFDE8E00BC7E3D /* Assets.xcassets */; };
 		EED300B82ACFDE8E00BC7E3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED300B72ACFDE8E00BC7E3D /* Preview Assets.xcassets */; };
 		EED300C02ACFE09800BC7E3D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EED300BF2ACFE09800BC7E3D /* ComposableArchitecture */; };
+		EED300C62ACFE27700BC7E3D /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300C52ACFE27700BC7E3D /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EED300AD2ACFDE8B00BC7E3D /* TCA-Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_LearnApp.swift; sourceTree = "<group>"; };
-		EED300B22ACFDE8B00BC7E3D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EED300B22ACFDE8B00BC7E3D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		EED300B42ACFDE8E00BC7E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED300B72ACFDE8E00BC7E3D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EED300C52ACFE27700BC7E3D /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,9 @@
 		EED300AF2ACFDE8B00BC7E3D /* TCA-Learn */ = {
 			isa = PBXGroup;
 			children = (
+				EED300C12ACFE1EA00BC7E3D /* CaseStudies */,
 				EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */,
-				EED300B22ACFDE8B00BC7E3D /* ContentView.swift */,
+				EED300B22ACFDE8B00BC7E3D /* RootView.swift */,
 				EED300B42ACFDE8E00BC7E3D /* Assets.xcassets */,
 				EED300B62ACFDE8E00BC7E3D /* Preview Content */,
 			);
@@ -67,6 +70,38 @@
 				EED300B72ACFDE8E00BC7E3D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EED300C12ACFE1EA00BC7E3D /* CaseStudies */ = {
+			isa = PBXGroup;
+			children = (
+				EED300C22ACFE1F600BC7E3D /* 01-Counter */,
+			);
+			path = CaseStudies;
+			sourceTree = "<group>";
+		};
+		EED300C22ACFE1F600BC7E3D /* 01-Counter */ = {
+			isa = PBXGroup;
+			children = (
+				EED300C42ACFE20C00BC7E3D /* Feature */,
+				EED300C32ACFE20600BC7E3D /* Views */,
+			);
+			path = "01-Counter";
+			sourceTree = "<group>";
+		};
+		EED300C32ACFE20600BC7E3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EED300C52ACFE27700BC7E3D /* CounterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EED300C42ACFE20C00BC7E3D /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED300B32ACFDE8B00BC7E3D /* ContentView.swift in Sources */,
+				EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */,
 				EED300B12ACFDE8B00BC7E3D /* TCA_LearnApp.swift in Sources */,
+				EED300C62ACFE27700BC7E3D /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
