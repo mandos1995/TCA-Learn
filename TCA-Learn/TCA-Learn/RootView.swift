@@ -27,8 +27,13 @@ struct RootView: View {
                                 ._printChanges()
                         })
                     }
+                    NavigationLink("Binding Basics") {
+                        BindingBasicsView()
+                    }
                 }
             }
+            .navigationTitle("Case Studies")
         }
+        
     }
 }

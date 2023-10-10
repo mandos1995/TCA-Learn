@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */; };
 		EED300B12ACFDE8B00BC7E3D /* TCA_LearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */; };
 		EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B22ACFDE8B00BC7E3D /* RootView.swift */; };
 		EED300B52ACFDE8E00BC7E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED300B42ACFDE8E00BC7E3D /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsView.swift; sourceTree = "<group>"; };
 		EED300AD2ACFDE8B00BC7E3D /* TCA-Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_LearnApp.swift; sourceTree = "<group>"; };
 		EED300B22ACFDE8B00BC7E3D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -44,6 +46,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */ = {
+			isa = PBXGroup;
+			children = (
+				EE9EF5A12AD51E5C00AF1974 /* Views */,
+				EE9EF5A02AD51E5700AF1974 /* Feature */,
+			);
+			path = "03-Bindings-Basics";
+			sourceTree = "<group>";
+		};
+		EE9EF5A02AD51E5700AF1974 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		EE9EF5A12AD51E5C00AF1974 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EED300A42ACFDE8B00BC7E3D = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +109,10 @@
 		EED300C12ACFE1EA00BC7E3D /* CaseStudies */ = {
 			isa = PBXGroup;
 			children = (
-				EED300C72ACFE41C00BC7E3D /* Utils */,
 				EED300C22ACFE1F600BC7E3D /* 01-Counter */,
 				EED300CD2ACFF11100BC7E3D /* 02-TwoCounter */,
+				EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */,
+				EED300C72ACFE41C00BC7E3D /* Utils */,
 			);
 			path = CaseStudies;
 			sourceTree = "<group>";
@@ -237,6 +264,7 @@
 				EED300D12ACFF14C00BC7E3D /* TwoCounterView.swift in Sources */,
 				EED300CA2ACFE43200BC7E3D /* AboutView.swift in Sources */,
 				EED300CC2ACFE64D00BC7E3D /* CounterFeature.swift in Sources */,
+				EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */,
 				EED300D32ACFF7E400BC7E3D /* TwoCounterFeature.swift in Sources */,
 				EED300C62ACFE27700BC7E3D /* CounterView.swift in Sources */,
 			);

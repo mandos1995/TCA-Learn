@@ -48,5 +48,6 @@ struct TwoCounterView: View {
                 }
             }
         }
+        .navigationTitle("Two Counter")
     }
 }
