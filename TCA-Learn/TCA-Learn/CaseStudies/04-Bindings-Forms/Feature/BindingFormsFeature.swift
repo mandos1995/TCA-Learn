@@ -27,11 +27,14 @@ struct BindingFormsFeature: Reducer {
         BindingReducer()
         Reduce { state, action in
             switch action {
+                
+            case .binding(\.$stepCount):
+                state.sliderValue = .minimum(state.sliderValue, Double(state.stepCount))
+                return .none
+                
             case .binding:
                 return .none
-            case .binding(\.$stepCount):
-                state.sliderValue = min(state.sliderValue, Double(state.stepCount))
-                return .none
+            
             case .resetButtonTapped:
                 state = State()
                 return .none

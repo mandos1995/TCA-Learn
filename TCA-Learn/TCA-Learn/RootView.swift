@@ -35,7 +35,10 @@ struct RootView: View {
                     }
                     
                     NavigationLink("Binding Forms") {
-                        BindingFormsView()
+                        BindingFormsView(store: Store(initialState: BindingFormsFeature.State()) {
+                            BindingFormsFeature()
+                                ._printChanges()
+                        })
                     }
                 }
             }

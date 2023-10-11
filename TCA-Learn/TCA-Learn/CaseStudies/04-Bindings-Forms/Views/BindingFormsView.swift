@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 private let readme = """
 이 화면은 Composable Architecture를 사용하여 양방향 바인딩을 다루는 방법을 보여줍니다.
 바인딩 상태와 액션을 사용하면 모든 UI 컨트롤에 고유한 액션을 필요로 하는 부수적인 코드를 안전하게 제거할 수 있습니다. 
@@ -17,41 +19,49 @@ private let readme = """
 
 struct BindingFormsView: View {
     
-    @State var txt: String = ""
-    @State var isOn: Bool = false
-    @State var stepperValue: Int = 0
-    @State var sliderValue: Double = 0
+    let store: StoreOf<BindingFormsFeature>
     
     var body: some View {
-        Form {
-            Section {
-                AboutView(readme: readme)
-            }
-            Section {
-                TextField("Type here", text: $txt)
-                Toggle(
-                    "Disable other controls",
-                    isOn: $isOn
-                )
-                
-                Stepper(
-                    "Max slider value: \(stepperValue)",
-                    value: $stepperValue
-                )
-                HStack {
-                    Text("Slider value: \(Int(sliderValue))")
-                    Slider(
-                        value: $sliderValue,
+        WithViewStore(store, observe: { $0 }) { viewStore in
+            Form {
+                Section {
+                    AboutView(readme: readme)
+                }
+                Section {
+                    TextField("Type here", text: viewStore.$text)
+                        .disabled(viewStore.toggleIsOn)
+                        .foregroundStyle(viewStore.toggleIsOn ? .secondary : .primary)
+                    
+                    Toggle(
+                        "Disable other controls",
+                        isOn: viewStore.$toggleIsOn
+                    )
+                    
+                    Stepper(
+                        "Max slider value: \(viewStore.stepCount)",
+                        value: viewStore.$stepCount,
                         in: 0...100
                     )
-                }
-                Button("Reset") {
+                    .disabled(viewStore.toggleIsOn)
                     
+                    HStack {
+                        Text("Slider value: \(Int(viewStore.sliderValue))")
+                        Slider(
+                            value: viewStore.$sliderValue,
+                            in: 0...Double(viewStore.stepCount)
+                        )
+                        .disabled(viewStore.toggleIsOn)
+                    }
+                    
+                    Button("Reset") {
+                        viewStore.send(.resetButtonTapped)
+                    }
+                    .foregroundStyle(Color.red)
                 }
-                .foregroundStyle(Color.red)
             }
+            .navigationTitle("Binding Forms")
         }
-        .navigationTitle("Binding Forms")
+        
     }
 }
 
