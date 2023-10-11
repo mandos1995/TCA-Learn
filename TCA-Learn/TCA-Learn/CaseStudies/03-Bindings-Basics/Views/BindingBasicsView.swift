@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 private let readme =
 """
 이 화면은 Composable Architecture에서 양방향 바인딩(two-way bindings)을 다루는 방법을 보여줍니다.
@@ -20,27 +22,56 @@ Composable Architecture에서는 작업을 수행하기 위해 바인딩(Binding
 
 struct BindingBasicsView: View {
     
-    @State var textViewText: String = ""
-    @State var isToggleOn: Bool = false
-    @State var stepperValue: Int = 10
-    @State var sliderValue: Float = 10
+    let store: StoreOf<BindingBasicsFeature>
     
     var body: some View {
-        Form {
-            Section {
-                AboutView(readme: readme)
-            }
-            Section {
-                TextField("Type here", text: $textViewText)
-                Toggle("Disable other controls", isOn: $isToggleOn)
-                Stepper("Max slider value: \(stepperValue)", value: $stepperValue)
-                HStack {
-                    Text("Slider value: \(Int(sliderValue))")
-                    Slider(value: $sliderValue, in: 1...100)
+        WithViewStore(self.store, observe: { $0 }) { viewStore in
+            Form {
+                Section {
+                    AboutView(readme: readme)
                 }
-                
+                Section {
+                    TextField(
+                        "Type here",
+                        text: viewStore.binding(
+                            get: \.text,
+                            send: { .textChanged(text: $0) }
+                        )
+                    )
+                    .foregroundStyle(viewStore.toggleIsOn ? .secondary : .primary)
+                    .disabled(viewStore.toggleIsOn)
+                    
+                    Toggle(
+                        "Disable other controls",
+                        isOn: viewStore.binding(
+                            get: \.toggleIsOn,
+                            send: { .toggleChanged(isOn: $0) }
+                        )
+                    )
+                    
+                    Stepper("Max slider value: \(viewStore.stepCount)",
+                            value: viewStore.binding(
+                                get: \.stepCount,
+                                send: { .stepCountChanged(count: $0) }
+                            )
+                    )
+                    .disabled(viewStore.toggleIsOn)
+                    
+                    HStack {
+                        Text("Slider value: \(Int(viewStore.sliderValue))")
+                        Slider(
+                            value: viewStore.binding(
+                                get: \.sliderValue,
+                                send: { .sliderValueChanged(value: $0) }
+                            ), in: 0...Double(viewStore.stepCount)
+                        )
+                        .tint(viewStore.toggleIsOn ? Color.gray : Color.primary)
+                        .disabled(viewStore.toggleIsOn)
+                    }
+                }
             }
+            .navigationTitle("Binding Basics")
         }
-        .navigationTitle("Binding Basics")
+        
     }
 }

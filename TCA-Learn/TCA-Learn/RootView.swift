@@ -28,7 +28,10 @@ struct RootView: View {
                         })
                     }
                     NavigationLink("Binding Basics") {
-                        BindingBasicsView()
+                        BindingBasicsView(store: Store(initialState: BindingBasicsFeature.State()) {
+                            BindingBasicsFeature()
+                                ._printChanges()
+                        })
                     }
                 }
             }
