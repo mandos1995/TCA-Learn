@@ -33,6 +33,10 @@ struct RootView: View {
                                 ._printChanges()
                         })
                     }
+                    
+                    NavigationLink("Binding Forms") {
+                        BindingFormsView()
+                    }
                 }
             }
             .navigationTitle("Case Studies")
