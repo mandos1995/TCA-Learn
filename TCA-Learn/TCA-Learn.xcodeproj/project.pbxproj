@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE2D6BDA2AD683D3008857A0 /* BindingBasicsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BD92AD683D3008857A0 /* BindingBasicsFeature.swift */; };
 		EE2D6BDE2AD68CC9008857A0 /* BindingFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */; };
+		EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */; };
 		EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */; };
 		EED300B12ACFDE8B00BC7E3D /* TCA_LearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */; };
 		EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B22ACFDE8B00BC7E3D /* RootView.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		EE2D6BD92AD683D3008857A0 /* BindingBasicsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsFeature.swift; sourceTree = "<group>"; };
 		EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsView.swift; sourceTree = "<group>"; };
+		EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsFeature.swift; sourceTree = "<group>"; };
 		EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsView.swift; sourceTree = "<group>"; };
 		EED300AD2ACFDE8B00BC7E3D /* TCA-Learn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCA-Learn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED300B02ACFDE8B00BC7E3D /* TCA_LearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCA_LearnApp.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 		EE2D6BDB2AD68CA6008857A0 /* 04-Bindings-Forms */ = {
 			isa = PBXGroup;
 			children = (
+				EE2D6BDF2AD697BF008857A0 /* Feature */,
 				EE2D6BDC2AD68CBA008857A0 /* Views */,
 			);
 			path = "04-Bindings-Forms";
@@ -64,6 +67,14 @@
 				EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EE2D6BDF2AD697BF008857A0 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */ = {
@@ -283,6 +294,7 @@
 			files = (
 				EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */,
 				EED300B12ACFDE8B00BC7E3D /* TCA_LearnApp.swift in Sources */,
+				EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */,
 				EED300D12ACFF14C00BC7E3D /* TwoCounterView.swift in Sources */,
 				EED300CA2ACFE43200BC7E3D /* AboutView.swift in Sources */,
 				EED300CC2ACFE64D00BC7E3D /* CounterFeature.swift in Sources */,
