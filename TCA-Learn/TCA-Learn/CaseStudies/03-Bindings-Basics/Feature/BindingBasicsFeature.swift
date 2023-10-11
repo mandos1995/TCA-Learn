@@ -34,6 +34,7 @@ struct BindingBasicsFeature: Reducer {
             state.toggleIsOn = isOn
             return .none
         case .stepCountChanged(let count):
+            state.sliderValue = min(state.sliderValue, Double(count))
             state.stepCount = count
             return .none
         case .sliderValueChanged(let value):
