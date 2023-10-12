@@ -11,6 +11,7 @@
 		EE2D6BDE2AD68CC9008857A0 /* BindingFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */; };
 		EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */; };
 		EE98CCF52AD7B7E300B81104 /* SharedStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */; };
+		EE98CCF82AD7CEC400B81104 /* SharedStateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */; };
 		EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */; };
 		EEA3B41B2AD787EA007662A0 /* OptionalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3B41A2AD787EA007662A0 /* OptionalStateView.swift */; };
 		EEA3B41E2AD78ACE007662A0 /* OptionalStateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3B41D2AD78ACE007662A0 /* OptionalStateFeature.swift */; };
@@ -31,6 +32,7 @@
 		EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsView.swift; sourceTree = "<group>"; };
 		EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsFeature.swift; sourceTree = "<group>"; };
 		EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateView.swift; sourceTree = "<group>"; };
+		EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateFeature.swift; sourceTree = "<group>"; };
 		EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsView.swift; sourceTree = "<group>"; };
 		EEA3B41A2AD787EA007662A0 /* OptionalStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStateView.swift; sourceTree = "<group>"; };
 		EEA3B41D2AD78ACE007662A0 /* OptionalStateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStateFeature.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 		EE98CCF22AD7B75300B81104 /* 06-SharedState */ = {
 			isa = PBXGroup;
 			children = (
+				EE98CCF62AD7CEB200B81104 /* Feature */,
 				EE98CCF32AD7B76C00B81104 /* Views */,
 			);
 			path = "06-SharedState";
@@ -97,6 +100,14 @@
 				EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EE98CCF62AD7CEB200B81104 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 		EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */ = {
@@ -350,6 +361,7 @@
 				EED300CC2ACFE64D00BC7E3D /* CounterFeature.swift in Sources */,
 				EEA3B41E2AD78ACE007662A0 /* OptionalStateFeature.swift in Sources */,
 				EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */,
+				EE98CCF82AD7CEC400B81104 /* SharedStateFeature.swift in Sources */,
 				EED300D32ACFF7E400BC7E3D /* TwoCounterFeature.swift in Sources */,
 				EEA3B41B2AD787EA007662A0 /* OptionalStateView.swift in Sources */,
 				EED300C62ACFE27700BC7E3D /* CounterView.swift in Sources */,
