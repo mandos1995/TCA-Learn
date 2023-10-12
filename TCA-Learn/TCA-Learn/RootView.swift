@@ -46,6 +46,9 @@ struct RootView: View {
                                 ._printChanges()
                         })
                     }
+                    NavigationLink("Shared State") {
+                        SharedStateView()
+                    }
                 }
             }
             .navigationTitle("Case Studies")

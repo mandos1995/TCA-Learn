@@ -10,6 +10,7 @@
 		EE2D6BDA2AD683D3008857A0 /* BindingBasicsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BD92AD683D3008857A0 /* BindingBasicsFeature.swift */; };
 		EE2D6BDE2AD68CC9008857A0 /* BindingFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */; };
 		EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */; };
+		EE98CCF52AD7B7E300B81104 /* SharedStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */; };
 		EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */; };
 		EEA3B41B2AD787EA007662A0 /* OptionalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3B41A2AD787EA007662A0 /* OptionalStateView.swift */; };
 		EEA3B41E2AD78ACE007662A0 /* OptionalStateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3B41D2AD78ACE007662A0 /* OptionalStateFeature.swift */; };
@@ -29,6 +30,7 @@
 		EE2D6BD92AD683D3008857A0 /* BindingBasicsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsFeature.swift; sourceTree = "<group>"; };
 		EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsView.swift; sourceTree = "<group>"; };
 		EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsFeature.swift; sourceTree = "<group>"; };
+		EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateView.swift; sourceTree = "<group>"; };
 		EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsView.swift; sourceTree = "<group>"; };
 		EEA3B41A2AD787EA007662A0 /* OptionalStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStateView.swift; sourceTree = "<group>"; };
 		EEA3B41D2AD78ACE007662A0 /* OptionalStateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStateFeature.swift; sourceTree = "<group>"; };
@@ -79,6 +81,22 @@
 				EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		EE98CCF22AD7B75300B81104 /* 06-SharedState */ = {
+			isa = PBXGroup;
+			children = (
+				EE98CCF32AD7B76C00B81104 /* Views */,
+			);
+			path = "06-SharedState";
+			sourceTree = "<group>";
+		};
+		EE98CCF32AD7B76C00B81104 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */ = {
@@ -170,6 +188,7 @@
 		EED300C12ACFE1EA00BC7E3D /* CaseStudies */ = {
 			isa = PBXGroup;
 			children = (
+				EE98CCF22AD7B75300B81104 /* 06-SharedState */,
 				EED300C22ACFE1F600BC7E3D /* 01-Counter */,
 				EED300CD2ACFF11100BC7E3D /* 02-TwoCounter */,
 				EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */,
@@ -325,6 +344,7 @@
 				EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */,
 				EED300B12ACFDE8B00BC7E3D /* TCA_LearnApp.swift in Sources */,
 				EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */,
+				EE98CCF52AD7B7E300B81104 /* SharedStateView.swift in Sources */,
 				EED300D12ACFF14C00BC7E3D /* TwoCounterView.swift in Sources */,
 				EED300CA2ACFE43200BC7E3D /* AboutView.swift in Sources */,
 				EED300CC2ACFE64D00BC7E3D /* CounterFeature.swift in Sources */,
