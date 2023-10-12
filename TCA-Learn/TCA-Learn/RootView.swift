@@ -47,7 +47,10 @@ struct RootView: View {
                         })
                     }
                     NavigationLink("Shared State") {
-                        SharedStateView()
+                        SharedStateView(store: Store(initialState: SharedState.State()) {
+                            SharedState()
+                                ._printChanges()
+                        })
                     }
                 }
             }

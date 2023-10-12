@@ -91,7 +91,7 @@ struct SharedState: Reducer {
                     return .none
                 case .decrementButtonTapped:
                     state.count -= 1
-                    state.numberOfCount -= 1
+                    state.numberOfCount += 1
                     state.minCount = min(state.count, state.minCount)
                     return .none
                 case .isPrimeButtonTapped:
