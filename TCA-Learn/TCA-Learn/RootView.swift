@@ -40,6 +40,9 @@ struct RootView: View {
                                 ._printChanges()
                         })
                     }
+                    NavigationLink("Optional State") {
+                        OptionalStateView()
+                    }
                 }
             }
             .navigationTitle("Case Studies")
