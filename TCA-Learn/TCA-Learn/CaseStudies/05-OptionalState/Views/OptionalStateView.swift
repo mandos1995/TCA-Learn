@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 private let readme = """
 이 화면은 선택적 자식 상태의 존재에 따라 보기를 표시하거나 숨기는 방법을 보여주고 있습니다.
 
@@ -16,18 +18,28 @@ private let readme = """
 """
 
 struct OptionalStateView: View {
+    let store: StoreOf<OptionalStateFeature>
+    
     var body: some View {
-        Form {
-            Section {
-                AboutView(readme: readme)
-            }
-            Section {
-                Button("Toggle counter state") {
-                    //
+        WithViewStore(store, observe: { $0 }) { viewStore in
+            Form {
+                Section {
+                    AboutView(readme: readme)
                 }
-                Text("CounterState is nil")
+                Section {
+                    Button("Toggle counter state") {
+                        store.send(.toggleCounterButtonTapped)
+                    }
+                    IfLetStore(store.scope(state: \.optionalCounter, action: { .optionalCounter($0) })) { store in
+                        Text("CounterState is not nil")
+                        CounterView(store: store)
+                            .frame(maxWidth: .infinity)
+                    } else: {
+                        Text("CounterState is nil")
+                    }
+                }
             }
+            .navigationTitle("Optional State")
         }
-        .navigationTitle("Optional State")
     }
 }

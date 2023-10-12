@@ -41,7 +41,10 @@ struct RootView: View {
                         })
                     }
                     NavigationLink("Optional State") {
-                        OptionalStateView()
+                        OptionalStateView(store: Store(initialState: OptionalStateFeature.State()) {
+                            OptionalStateFeature()
+                                ._printChanges()
+                        })
                     }
                 }
             }
