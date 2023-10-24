@@ -52,6 +52,9 @@ struct RootView: View {
                                 ._printChanges()
                         })
                     }
+                    NavigationLink("Alerts And Confirmation Dialogs") {
+                        AlertAndConfirmationDialogView()
+                    }
                 }
             }
             .navigationTitle("Case Studies")

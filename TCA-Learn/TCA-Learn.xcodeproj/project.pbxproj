@@ -12,6 +12,7 @@
 		EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */; };
 		EE98CCF52AD7B7E300B81104 /* SharedStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */; };
 		EE98CCF82AD7CEC400B81104 /* SharedStateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */; };
+		EE98CCFF2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCFE2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift */; };
 		EE9EF5A32AD51E7400AF1974 /* BindingBasicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */; };
 		EEA3B41B2AD787EA007662A0 /* OptionalStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3B41A2AD787EA007662A0 /* OptionalStateView.swift */; };
 		EEA3B41E2AD78ACE007662A0 /* OptionalStateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3B41D2AD78ACE007662A0 /* OptionalStateFeature.swift */; };
@@ -33,6 +34,7 @@
 		EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingFormsFeature.swift; sourceTree = "<group>"; };
 		EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateView.swift; sourceTree = "<group>"; };
 		EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateFeature.swift; sourceTree = "<group>"; };
+		EE98CCFE2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndConfirmationDialogView.swift; sourceTree = "<group>"; };
 		EE9EF5A22AD51E7400AF1974 /* BindingBasicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBasicsView.swift; sourceTree = "<group>"; };
 		EEA3B41A2AD787EA007662A0 /* OptionalStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStateView.swift; sourceTree = "<group>"; };
 		EEA3B41D2AD78ACE007662A0 /* OptionalStateFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalStateFeature.swift; sourceTree = "<group>"; };
@@ -108,6 +110,30 @@
 				EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		EE98CCFB2AD7E19400B81104 /* 07-AlertAndConfirmationDialog */ = {
+			isa = PBXGroup;
+			children = (
+				EE98CCFD2AD7E1E500B81104 /* Views */,
+				EE98CCFC2AD7E1E000B81104 /* Feature */,
+			);
+			path = "07-AlertAndConfirmationDialog";
+			sourceTree = "<group>";
+		};
+		EE98CCFC2AD7E1E000B81104 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		EE98CCFD2AD7E1E500B81104 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE98CCFE2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */ = {
@@ -199,12 +225,13 @@
 		EED300C12ACFE1EA00BC7E3D /* CaseStudies */ = {
 			isa = PBXGroup;
 			children = (
-				EE98CCF22AD7B75300B81104 /* 06-SharedState */,
 				EED300C22ACFE1F600BC7E3D /* 01-Counter */,
 				EED300CD2ACFF11100BC7E3D /* 02-TwoCounter */,
 				EE9EF59F2AD51E3700AF1974 /* 03-Bindings-Basics */,
 				EE2D6BDB2AD68CA6008857A0 /* 04-Bindings-Forms */,
 				EEA3B4182AD78780007662A0 /* 05-OptionalState */,
+				EE98CCF22AD7B75300B81104 /* 06-SharedState */,
+				EE98CCFB2AD7E19400B81104 /* 07-AlertAndConfirmationDialog */,
 				EED300C72ACFE41C00BC7E3D /* Utils */,
 			);
 			path = CaseStudies;
@@ -366,6 +393,7 @@
 				EEA3B41B2AD787EA007662A0 /* OptionalStateView.swift in Sources */,
 				EED300C62ACFE27700BC7E3D /* CounterView.swift in Sources */,
 				EE2D6BDE2AD68CC9008857A0 /* BindingFormsView.swift in Sources */,
+				EE98CCFF2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift in Sources */,
 				EE2D6BDA2AD683D3008857A0 /* BindingBasicsFeature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
