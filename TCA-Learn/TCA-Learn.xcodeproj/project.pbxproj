@@ -10,6 +10,7 @@
 		EE2D6BDA2AD683D3008857A0 /* BindingBasicsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BD92AD683D3008857A0 /* BindingBasicsFeature.swift */; };
 		EE2D6BDE2AD68CC9008857A0 /* BindingFormsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BDD2AD68CC9008857A0 /* BindingFormsView.swift */; };
 		EE2D6BE12AD69800008857A0 /* BindingFormsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D6BE02AD69800008857A0 /* BindingFormsFeature.swift */; };
+		EE9626CA2B302BEE00D31B64 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EE9626C92B302BEE00D31B64 /* ComposableArchitecture */; };
 		EE98CCF52AD7B7E300B81104 /* SharedStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF42AD7B7E300B81104 /* SharedStateView.swift */; };
 		EE98CCF82AD7CEC400B81104 /* SharedStateFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCF72AD7CEC400B81104 /* SharedStateFeature.swift */; };
 		EE98CCFF2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE98CCFE2AD7E1FE00B81104 /* AlertAndConfirmationDialogView.swift */; };
@@ -21,7 +22,6 @@
 		EED300B32ACFDE8B00BC7E3D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300B22ACFDE8B00BC7E3D /* RootView.swift */; };
 		EED300B52ACFDE8E00BC7E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED300B42ACFDE8E00BC7E3D /* Assets.xcassets */; };
 		EED300B82ACFDE8E00BC7E3D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED300B72ACFDE8E00BC7E3D /* Preview Assets.xcassets */; };
-		EED300C02ACFE09800BC7E3D /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = EED300BF2ACFE09800BC7E3D /* ComposableArchitecture */; };
 		EED300C62ACFE27700BC7E3D /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300C52ACFE27700BC7E3D /* CounterView.swift */; };
 		EED300CA2ACFE43200BC7E3D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300C92ACFE43200BC7E3D /* AboutView.swift */; };
 		EED300CC2ACFE64D00BC7E3D /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED300CB2ACFE64D00BC7E3D /* CounterFeature.swift */; };
@@ -57,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED300C02ACFE09800BC7E3D /* ComposableArchitecture in Frameworks */,
+				EE9626CA2B302BEE00D31B64 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +323,7 @@
 			);
 			name = "TCA-Learn";
 			packageProductDependencies = (
-				EED300BF2ACFE09800BC7E3D /* ComposableArchitecture */,
+				EE9626C92B302BEE00D31B64 /* ComposableArchitecture */,
 			);
 			productName = "TCA-Learn";
 			productReference = EED300AD2ACFDE8B00BC7E3D /* TCA-Learn.app */;
@@ -354,7 +354,7 @@
 			);
 			mainGroup = EED300A42ACFDE8B00BC7E3D;
 			packageReferences = (
-				EED300BE2ACFE09800BC7E3D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				EE9626C82B302BEE00D31B64 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
 			);
 			productRefGroup = EED300AE2ACFDE8B00BC7E3D /* Products */;
 			projectDirPath = "";
@@ -606,20 +606,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EED300BE2ACFE09800BC7E3D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		EE9626C82B302BEE00D31B64 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				minimumVersion = 1.5.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EED300BF2ACFE09800BC7E3D /* ComposableArchitecture */ = {
+		EE9626C92B302BEE00D31B64 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EED300BE2ACFE09800BC7E3D /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = EE9626C82B302BEE00D31B64 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */
